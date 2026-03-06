@@ -52,7 +52,7 @@ y = data["Yield"]
 # Train model
 
 model = RandomForestRegressor(
-n_estimators=200,
+n_estimators=100,
 random_state=42
 )
 
@@ -60,8 +60,8 @@ model.fit(X,y)
 
 # Save model and encoders
 
-joblib.dump(model,"model.pkl")
-joblib.dump(le_state,"le_state.pkl")
+joblib.dump(model,"model.pkl",compress=3)
+joblib.dump(le_state,"le_state.pkl",compress=3)
 joblib.dump(le_crop,"le_crop.pkl")
 joblib.dump(le_season,"le_season.pkl")
 joblib.dump(le_soil,"le_soil.pkl")
