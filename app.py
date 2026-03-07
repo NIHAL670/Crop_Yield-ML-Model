@@ -5,6 +5,9 @@ import joblib
 import matplotlib.pyplot as plt
 
 model = joblib.load("model.pkl")
+for estimator in model.estimators_:
+    if not hasattr(estimator, "monotonic_cst"):
+        estimator.monotonic_cst = None
 le_state = joblib.load("le_state.pkl")
 le_crop = joblib.load("le_crop.pkl")
 le_season = joblib.load("le_season.pkl")
