@@ -69,7 +69,7 @@ st.header("Enter Crop Details")
 state = st.selectbox("State", le_state.classes_)
 crop = st.selectbox("Crop", le_crop.classes_)
 season = st.selectbox("Season", le_season.classes_)
-soil = st.selectbox("Soil Type", soil_types)
+soil = st.selectbox("Soil Type", le_soil.classes_)
 
 area = st.number_input("Area (hectare)", min_value=1.0)
 
