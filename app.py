@@ -3,12 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 import matplotlib.pyplot as plt
-import gdown
-import os
 
-if not os.path.exists("model.pkl"):
-    url = "https://drive.google.com/uc?id=1Pw_onQhfmnWmeDlNeX8E_40r3sl9xJhR"
-    gdown.download(url, "model.pkl", quiet=False)
 model = joblib.load("model.pkl")
 le_state = joblib.load("le_state.pkl")
 le_crop = joblib.load("le_crop.pkl")
